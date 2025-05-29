@@ -79,3 +79,16 @@ footer {
   .whatsapp-chat i {
     margin-top: 15px;
   }
+.brand-carousel-wrapper {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.brand-carousel-wrapper img {
+  transition: transform 0.3s;
+}
+
+.brand-carousel-wrapper img:hover {
+  transform: scale(1.1);
+}

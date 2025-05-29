@@ -23,8 +23,37 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
   />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
   <style>
+    .scroll-wrapper {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .employee-carousel::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .employee-carousel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+
+  .employee-carousel::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .employee-carousel {
+    scroll-snap-type: x mandatory;
+  }
+
+  .employee-carousel .card {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
     /* Continuous animation keyframes */
     @keyframes fadeSlideUpLoop {
       0%,
@@ -137,7 +166,7 @@
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item">
-            <a class="btn btn-outline-primary" href="enquiry.html">Enquiry</a>
+            <a class="btn btn-outline-primary" href="enquiry.html">Get in Touch</a>
           </li>
         </ul>
       </div>
@@ -164,54 +193,126 @@
       </div>
     </div>
   </section>
+<section class="py-5 bg-white" id="company-details">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5 animate__animated animate__fadeInDown">About <span class="text-primary"> Us</span></h2>
+    <div class="row g-4">
+      <!-- Who We Are -->
+      <div class="col-md-4 animate__animated animate__fadeInUp">
+        <div class="text-center p-4 border rounded shadow-sm h-100">
+          <i class="bi bi-building display-4 text-primary mb-3"></i>
+          <h5 class="fw-bold">Who We Are</h5>
+          <p>
+
+Netzwerk partners with global brands to provide premium IT products and tailored solutions that optimize your business’s technology for superior performance and growth.
+          </p>
+        </div>
+      </div>
+
+      <!-- What We Do -->
+      <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="text-center p-4 border rounded shadow-sm h-100">
+          <i class="bi bi-cpu-fill display-4 text-primary mb-3"></i>
+          <h5 class="fw-bold">What We Do</h5>
+          <p>
+            We provide refurbished IT equipment, offer flexible IT rental solutions, e-waste management, and on-site/off-site tech support services.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pan-India Services -->
+      <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="text-center p-4 border rounded shadow-sm h-100">
+          <i class="bi bi-globe-asia-australia display-4 text-primary mb-3"></i>
+          <h5 class="fw-bold">Serving Across India</h5>
+          <p>
+            With a pan-India presence, we ensure nationwide delivery, remote & on-site support, and multilingual assistance — wherever your business is located.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5 animate__animated animate__fadeInUp animate__delay-3s">
+      <h4 class="fw-bold mb-3">Why Choose Us?</h4>
+      <ul class="list-inline">
+        <li class="list-inline-item mx-3"><i class="bi bi-truck text-success me-2"></i>Fast Delivery</li>
+        <li class="list-inline-item mx-3"><i class="bi bi-tools text-success me-2"></i>Expert Support</li>
+        <li class="list-inline-item mx-3"><i class="bi bi-cash-coin text-success me-2"></i>Affordable Pricing</li>
+        <li class="list-inline-item mx-3"><i class="bi bi-recycle text-success me-2"></i>Sustainable Solutions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Company Employee Details Section -->
-  <section class="employee-details container my-5">
-    <h2 class="mb-4 text-center">Our Team</h2>
-    <div class="row justify-content-center g-4">
-      <!-- Founder Card -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-sm h-100">
-          <img
-            src="https://randomuser.me/api/portraits/men/32.jpg"
-            class="card-img-top"
-            alt="Founder Photo"
-          />
-          <div class="card-body">
-            <h5 class="card-title">John Doe</h5>
-            <p class="card-text"><strong>Founder & CEO</strong></p>
-            <p>
-              John has over 20 years experience leading tech companies and
-              driving innovation.
-            </p>
-          </div>
+<section class="employee-details container my-5">
+  <h2 class="mb-4 text-center">Our Team</h2>
+  <div class="scroll-wrapper">
+    <div class="employee-carousel d-flex flex-nowrap overflow-auto px-3">
+      <!-- Employee Card Example -->
+      <div class="card shadow-sm mx-2" style="min-width: 180px;">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="John Doe" />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">John Doe</h6>
+          <p class="mb-1" style="font-size: 0.85rem;"><strong>Founder & CEO</strong></p>
         </div>
       </div>
 
-      <!-- Another Employee Card -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-sm h-100">
-          <img
-            src="https://randomuser.me/api/portraits/women/44.jpg"
-            class="card-img-top"
-            alt="Employee Photo"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Jane Smith</h5>
-            <p class="card-text"><strong>Head of Operations</strong></p>
-            <p>Jane ensures smooth daily operations and excellent client support.</p>
-          </div>
+      <!-- Repeat for other employees -->
+      <div class="card shadow-sm mx-2" style="min-width: 180px;">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Jane Smith" />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">Jane Smith</h6>
+          <p class="mb-1" style="font-size: 0.85rem;"><strong>Head of Operations</strong></p>
         </div>
       </div>
 
-      <!-- Add more employee cards as needed -->
+      <div class="card shadow-sm mx-2" style="min-width: 180px;">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Jane Smith" />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">Jane Smith</h6>
+          <p class="mb-1" style="font-size: 0.85rem;"><strong>Head of Operations</strong></p>
+        </div>
+      </div>
+       <div class="card shadow-sm mx-2" style="min-width: 180px;">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Jane Smith" />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">Jane Smith</h6>
+          <p class="mb-1" style="font-size: 0.85rem;"><strong>Head of Operations</strong></p>
+        </div>
+      </div>
+       <div class="card shadow-sm mx-2" style="min-width: 180px;">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Jane Smith" />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">Jane Smith</h6>
+          <p class="mb-1" style="font-size: 0.85rem;"><strong>Head of Operations</strong></p>
+        </div>
+      </div>
+       <div class="card shadow-sm mx-2" style="min-width: 180px;">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Jane Smith" />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">Jane Smith</h6>
+          <p class="mb-1" style="font-size: 0.85rem;"><strong>Head of Operations</strong></p>
+        </div>
+      </div> 
+      <div class="card shadow-sm mx-2" style="min-width: 180px;">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" style="height: 180px; object-fit: cover;" alt="Jane Smith" />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">Jane Smith</h6>
+          <p class="mb-1" style="font-size: 0.85rem;"><strong>Head of Operations</strong></p>
+        </div>
+      </div>
     </div>
-  </section>
-  <a href="https://wa.me/916361827210?text=Hi%20Netzwerk!" target="_blank" class="whatsapp-chat">
-  <i class="bi bi-whatsapp"></i>
-</a>
+  </div>
+</section>
+
 
   <!-- Footer -->
+   <a href="https://wa.me/916361827210?text=Hi%20Netzwerk!" target="_blank" class="whatsapp-chat">
+  <i class="bi bi-whatsapp"></i>
+</a>
   <footer
     class="text-dark text-center text-lg-start mt-5 pt-4"
     style="background-color: #94a1b1"
@@ -220,7 +321,7 @@
       <div class="row">
         <!-- Company Info -->
         <div class="col-md-4 mb-4">
-          <h6 class="text-uppercase fw-bold mb-3">
+          <h6 class="text-uppercase fw-bold mb-3 d-flex align-items-center">
             <img
               src="images/logo-v3.png"
               alt="Netzwerk Logo"
@@ -235,7 +336,7 @@
             your technology runs smoothly and cost-effectively.
           </p>
         </div>
-
+            <!-- Services -->
         <div class="col-md-4 mb-4">
           <h6 class="text-uppercase fw-bold mb-3">Our Services</h6>
           <ul class="list-unstyled">
@@ -257,14 +358,21 @@
               <a
                 href="services.html#support"
                 class="text-reset text-decoration-none"
-                >IT Support</a
+                >Manage Infrastructure Service</a
               >
             </li>
             <li>
               <a
-                href="services.html#support"
+                href="services.html#rental"
                 class="text-reset text-decoration-none"
-                >Rental</a
+                >Device has a Service</a
+              >
+            </li>
+            <li>
+              <a
+                href="services.html#rental"
+                class="text-reset text-decoration-none"
+                >Electronic Lifecycle Management(sustainability)</a
               >
             </li>
           </ul>
@@ -273,10 +381,9 @@
         <!-- Contact Info -->
         <div class="col-md-4 mb-4">
           <h6 class="text-uppercase fw-bold mb-3">Contact Us</h6>
-          <p>
-            <i class="bi bi-geo-alt-fill me-2"></i> 2nd Floor, 50, 100 Feet Ring
-            Rd, BTM Layout, Bengaluru
-          </p>
+          <p><i class="bi bi-geo-alt-fill me-2"></i> No.265, First Floor , 6th Main, 4th Cross,
+                        Mico Layout ,BTM 2nd Stage,
+                        Bangalore -560076 </p>
           <p><i class="bi bi-envelope-fill me-2"></i> contact@netzwerk.systems</p>
           <p><i class="bi bi-telephone-fill me-2"></i> +91 63618 27210</p>
           <div class="mt-3">
@@ -286,14 +393,12 @@
             <a href="#" class="text-reset"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
-
-        <p class="text-center p-3 w-100 mb-0" style="background-color: #94a1b1;">
-          Copyright © 2025 Netzwerk All Rights Reserved
-        </p>
       </div>
+      <p class="text-center p-3 mb-0">
+        Copyright © 2025 Netzwerk. All Rights Reserved.
+      </p>
     </div>
   </footer>
-
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
