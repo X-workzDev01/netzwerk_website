@@ -1,0 +1,122 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #007bff !important;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+.brand-carousel-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  .brand-carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  .brand-card {
+    flex: 0 0 auto; /* Prevent shrinking */
+    border: none;
+  }
+
+  @keyframes fadeSlideUpLoop {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imagePulse {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply continuous animation */
+.content h1.animate {
+  animation: fadeSlideUpLoop 4s ease-in-out infinite;
+}
+
+.content p.animate {
+  animation: fadeSlideUpLoop 4s ease-in-out infinite;
+  animation-delay: 2s; /* delay to alternate with h1 */
+}
+
+.image-container img.animate {
+  animation: imagePulse 5s ease-in-out infinite;
+}
+
+.whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+  .whatsapp-chat i {
+    margin-top: 15px;
+  }
+.brand-carousel-wrapper {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.brand-carousel-wrapper img {
+  transition: transform 0.3s;
+}
+
+.brand-carousel-wrapper img:hover {
+  transform: scale(1.1);
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+body {
+  padding-top: 70px;
+}
+
+
+#bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+.my-heading {
+  color: white;
+}
+
+
