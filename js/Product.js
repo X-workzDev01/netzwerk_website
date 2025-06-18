@@ -34,3 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (paragraph) paragraph.classList.add('animate');
   if (image) image.classList.add('animate');
 });
+
+
+ function showProductModal(element) {
+    const title = element.getAttribute("data-title");
+    const description = element.getAttribute("data-description");
+    const image = element.getAttribute("data-image");
+
+    document.getElementById("productModalLabel").textContent = title;
+    document.getElementById("modalImage").src = image;
+    document.getElementById("modalDescription").textContent = description;
+
+    const modal = new bootstrap.Modal(document.getElementById("productModal"));
+    modal.show();
+  }
