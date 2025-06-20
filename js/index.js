@@ -22,3 +22,4 @@
   document.getElementById('animatedParagraph').classList.add('animate');
   document.getElementById('animatedImage').classList.add('animate');
 });
+

@@ -120,3 +120,16 @@ body {
 }
 
 
+.gradient-bg {
+  background: linear-gradient(to right, #000000, transparent);
+  color: #fff;
+}
+
+.gradient-navbar {
+  background: linear-gradient(to right, 
+    #000000 0%, 
+    #000000 30%, 
+    #007bff 100%);
+}
+
+
