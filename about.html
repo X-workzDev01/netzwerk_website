@@ -141,9 +141,12 @@
 
   </style>
 </head>
-<body> <video autoplay muted loop playsinline id="bg-video">
-<source src="videos/33093-395456662_small.mp4" type="video/mp4">
-  </video></body>
+<div class="video-container">
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="videos/33093-395456662_small.mp4" type="video/mp4">
+  </video>
+  <div class="video-shade"></div>
+</div>
   <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark gradient-navbar shadow-sm fixed-top">
     <div class="container">
@@ -169,6 +172,8 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
+
           <li class="nav-item"><a  class="nav-link" href="enquiry.html">Get in Touch</a></li>
           
         </ul>
@@ -183,7 +188,7 @@
         <h1 id="animatedTitle"style="color: #e0e0e0;" >Seamless IT Infrastructure & Software Services</h1>
         <p id="animatedParagraph" style="color: #e0e0e0;">
           Delivering cutting-edge hardware and software solutions tailored for your business needs.  
-  From reliable IT infrastructure to innovative software development, we empower your growth with seamless technology and expert support.
+          From reliable IT infrastructure to innovative software development, we empower your growth with seamless technology and expert support.
         </p>
       </div>
       <div class="col-md-6 image-container">
@@ -196,26 +201,26 @@
       </div>
     </div>
   </section>
-  <!-- Vision & Mission Section -->
-<section class="py-5 bg-transparent text-white" id="vision-mission">
+<!-- Vision & Mission Section -->
+<section class="py-5 bg-transparent" id="vision-mission">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5 animate__animated animate__fadeInDown">Our <span class="text-primary">Vision & Mission</span></h2>
+    <h2 class="text-center fw-bold mb-5 animate__animated animate__fadeInDownvision-mission " style="color: white;">Our <span class="text-white ">Vision & Mission</span></h2>
     <div class="row g-4">
       <!-- Vision -->
       <div class="col-md-6 animate__animated animate__fadeInLeft">
-          <section class="py-5 bg-transparent" id="vision-mission">
-          <h5 class="fw-bold text-primary mb-3"><i class="bi bi-eye-fill me-2"></i>Our Vision</h5>
-          <p>
-            To be a trusted leader in sustainable IT infrastructure and services by delivering value-driven, innovative, and eco-friendly technology solutions that enable businesses to thrive.
-          </p>
-        </div>
+         <div class="p-4 border rounded shadow-sm h-100 bg-transparent">
+          <h5 class="fw-bold text-white mb-3 "><i class="bi bi-eye-fill me-2  "></i>Our Vision</h5>
+         <p style="color: white;">
+          To be a global leader in IT sales and services, delivering innovative and scalable solutions. We aim to empower businesses through cutting-edge technology while upholding standards of excellence, integrity, and sustainability.
+           </p> 
+        </div>   
       </div>
       <!-- Mission -->
       <div class="col-md-6 animate__animated animate__fadeInRight">
-        <section class="py-5 bg-transparent" id="vision-mission">
-          <h5 class="fw-bold text-primary mb-3"><i class="bi bi-bullseye me-2"></i>Our Mission</h5>
-          <p>
-            To empower businesses with customized IT solutions, promote circular technology through refurbishment and rental, and provide seamless support services that prioritize quality, efficiency, and sustainability.
+         <div class="p-4 border rounded shadow-sm h-100 bg-transparent">
+          <h5 class="fw-bold text-white mb-3"><i class="bi bi-bullseye me-2"></i>Our Mission</h5>
+           <p style="color: white;">
+            To provide customer-focused, cost-effective IT solutions that add real value to our clients. We are committed to delivering reliable services, fostering long-term partnerships, and driving technological excellence for sustainable business growth.
           </p>
         </div>
       </div>
@@ -273,7 +278,61 @@ Netzwerk partners with global brands to provide premium IT products and tailored
     </div>
   </div>
 </section>
+
+<!-- Achievements Section -->
+<section class="container my-5" id="achievements">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold text-light">Our Achievements</h2>
+    <p style="color: #e0e0e0;">Recognitions and milestones we've proudly achieved.</p>
+  </div>
+<section class="container mt-5">
+
+  <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+   <div class="carousel-item active text-center">
+  <img src="images/certificate_03.jpeg"
+       class="img-fluid rounded-4 shadow-lg"
+       style="max-width: 80%; height: auto; object-fit: cover; transition: transform 0.5s ease;"
+       alt="Team Collaboration"
+       onmouseover="this.style.transform='scale(1.02)'"
+       onmouseout="this.style.transform='scale(1)'">
+</div>
+
+      <!-- Slide  -->
+      <div class="carousel-item">
+        <img src="images\certificate.jpeg" 
+        class="d-block mx-auto img-fluid rounded-4 shadow-lg"
+       style="max-height: 480px; object-fit: cover; width: 90%;"
+       alt="Office Environment">
+      </div>
+
+      <!-- Additional slides can be added here -->
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+    <!-- Indicators -->
+    <div class="carousel-indicators mt-3">
+      <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+  </div>
+</section>
+
+
 <section class="container mt-5" id="staff">
+
   <h2 class="text-center fw-bold mb-5 animate__animated animate__fadeInDown" style="color: #e0e0e0;">
     Meet Our <span class="text-primary">Team</span>
   </h2>
@@ -339,8 +398,6 @@ Netzwerk partners with global brands to provide premium IT products and tailored
       <div class="col-lg-4 col-md-6 d-flex flex-column align-items-lg-center">
         <h6 class="text-uppercase fw-bold mb-3">Our Services</h6>
         <ul class="list-unstyled small">
-          <li><a href="services.html#repairs" class="text-reset text-decoration-none">Refurbishment</a></li>
-          <li><a href="services.html#networking" class="text-reset text-decoration-none">Resale</a></li>
           <li><a href="services.html#support" class="text-reset text-decoration-none">Manage Infrastructure Service</a></li>
           <li><a href="services.html#rental" class="text-reset text-decoration-none">Device as a Service</a></li>
           <li><a href="services.html#rental" class="text-reset text-decoration-none">Electronic Lifecycle Management</a></li>
@@ -354,16 +411,18 @@ Netzwerk partners with global brands to provide premium IT products and tailored
     <p class="small mb-2">
         <i></i>
         <span style="margin-right: 0.5rem; display: inline-block;">
-            Address: No.265, First Floor, 6th Main, 4th Cross
+          <strong style="font-size: 0.9rem;">Address:</strong>   No.265, First Floor, 6th Main, 4th Cross
         </span><br>
+        <span style="text-align: right; margin-right: 0.3rem;">
         Mico Layout, BTM 2nd Stage, Bangalore - 560076
+    </span>
     </p>
 
     <p class="small mb-2" style="margin-right: 6rem;">
-        <i></i> Email: contact@netzwerk.systems
+        <i></i> <Strong style="font-size: 0.9rem;" >Email:</Strong> contact@netzwerk.systems
     </p>
     <p class="small mb-2" style="margin-right: 9.5rem;">
-      <i ></i> Phone:+91 63618 27210
+      <i ></i> <Strong style="font-size: 0.9rem;" >Phone:</Strong>+91 63618 27210
        </p>
 
         <div class="mt-3">

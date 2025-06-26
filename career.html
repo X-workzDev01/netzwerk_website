@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netzwerk</title>
+  <link rel="icon" href="images/logo-v3.png" type="image/png">
+
+  <!-- Animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .scroll-wrapper {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .employee-carousel::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .employee-carousel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+
+  .employee-carousel::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .employee-carousel {
+    scroll-snap-type: x mandatory;
+  }
+
+  .employee-carousel .card {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+    /* Continuous animation keyframes */
+    @keyframes fadeSlideUpLoop {
+      0%,
+      100% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes imagePulse {
+      0%,
+      100% {
+        transform: scale(0.9);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Apply continuous animation */
+    .content h1.animate {
+      animation: fadeSlideUpLoop 20s ease-in-out infinite;
+    }
+
+    .content p.animate {
+      animation: fadeSlideUpLoop 25s ease-in-out infinite;
+      animation-delay: 0.1s; /* delay to alternate with h1 */
+    }
+
+    .image-container img.animate {
+      animation: imagePulse 5s ease-in-out infinite;
+    }
+
+    /* Layout tweaks */
+    .animated-section .content,
+    .animated-section .image-container {
+      margin-bottom: 1rem;
+    }
+
+    /* Employee section */
+    .employee-details h2 {
+      font-weight: 700;
+      color: #0d6efd; /* Bootstrap primary color */
+    }
+
+    .employee-details .card-img-top {
+      object-fit: cover;
+      height: 250px;
+    }
+
+    .employee-details .card {
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .employee-details .card:hover {
+      transform: translateY(-10px);
+    }
+    
+.whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+  .whatsapp-chat i {
+    margin-top: 15px;
+  }
+
+  </style>
+</head>
+<div class="video-container">
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="videos/33093-395456662_small.mp4" type="video/mp4">
+  </video>
+  <div class="video-shade"></div>
+</div>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark gradient-navbar shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Netzwerk Logo" height="30">
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
+
+          <li class="nav-item"><a  class="nav-link" href="enquiry.html">Get in Touch</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Animated Section: Text + Image side by side -->
+  <section class="container py-5 mt-3">
+  <div class="text-center section-title mb-5" style="color: aliceblue;">
+    <h2>We are hiring</h2>
+    <p>Join our dynamic team and build a future with us</p>
+  </div>
+
+  <!-- Centered Row -->
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="glass-card">
+        <h5 class="mb-4 text-white" style="text-align: center;">Leave a Message</h5>
+        <form>
+          <div class="mb-3">
+            <label for="fullName" class="form-label" style="color: aliceblue;">Enter Full Name</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Your name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label" style="color: aliceblue;">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="contactNumber" class="form-label" style="color: aliceblue;">Contact Number</label>
+            <input type="tel" class="form-control" id="contactNumber" placeholder="+91XXXXXXXXXX" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label" style="color: aliceblue;">Type a Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <div class="text-center animate__animated animate__zoomIn animate__delay-2s">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- Footer -->
+      <a href="https://wa.me/916361827210?text=Hi%20Netzwerk!" target="_blank" class="whatsapp-chat">
+  <i class="bi bi-whatsapp"></i>
+</a>
+ <footer class="text-light text-center text-lg-start pt-5" style="background-color: #020203;">
+  <div class="container">
+    <div class="row gy-4 justify-content-between text-start">
+      
+      <!-- Left: Company Info -->
+      <div class="col-lg-4 col-md-12">
+        <h6 class="text-uppercase fw-bold mb-3 d-flex align-items-center">
+          <img src="images/logo.png" alt="Netzwerk Logo" height="30" class="me-2"> 
+        </h6>
+        <p class="small">
+          We offer expert IT refurbishment, rental, and service solutions—providing high-quality, affordable refurbished equipment and flexible rental options. Our services include repairs, maintenance, and full IT support to ensure your technology runs smoothly and cost-effectively.
+        </p>
+      </div>
+
+      <!-- Center: Our Services -->
+      <div class="col-lg-4 col-md-6 d-flex flex-column align-items-lg-center">
+        <h6 class="text-uppercase fw-bold mb-3">Our Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="services.html#support" class="text-reset text-decoration-none">Manage Infrastructure Service</a></li>
+          <li><a href="services.html#rental" class="text-reset text-decoration-none">Device as a Service</a></li>
+          <li><a href="services.html#rental" class="text-reset text-decoration-none">Electronic Lifecycle Management</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Contact Info -->
+      <div class="col-lg-4 col-md-6 text-lg-end">
+    <h6 class="text-uppercase fw-bold mb-3" style="text-align: right; margin-right: 6rem;">Contact Us</h6>
+
+    <p class="small mb-2">
+        <i></i>
+        <span style="margin-right: 0.5rem; display: inline-block;">
+          <strong style="font-size: 0.9rem;">Address:</strong>   No.265, First Floor, 6th Main, 4th Cross
+        </span><br>
+        <span style="text-align: right; margin-right: 0.3rem;">
+        Mico Layout, BTM 2nd Stage, Bangalore - 560076
+    </span>
+    </p>
+
+    <p class="small mb-2" style="margin-right: 6rem;">
+        <i></i> <Strong style="font-size: 0.9rem;" >Email:</Strong> contact@netzwerk.systems
+    </p>
+    <p class="small mb-2" style="margin-right: 9.5rem;">
+      <i ></i> <Strong style="font-size: 0.9rem;" >Phone:</Strong>+91 63618 27210
+       </p>
+
+        <div class="mt-3">
+          <a href="#" class="text-reset me-3"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" class="text-reset me-3"><i class="bi bi-twitter fs-5"></i></a>
+          <a href="#" class="text-reset me-3"><i class="bi bi-linkedin fs-5"></i></a>
+          <a href="#" class="text-reset"><i class="bi bi-instagram fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <hr class="my-4 border-light">
+    <p class="text-center small mb-0">&copy; 2025 Netzwerk. All Rights Reserved.</p>
+  </div>
+</footer>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("animatedTitle").classList.add("animate");
+      document.getElementById("animatedParagraph").classList.add("animate");
+      document.getElementById("animatedImage").classList.add("animate");
+    });
+  </script>
+</body>
+</html>
+
+
