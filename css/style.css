@@ -163,3 +163,13 @@ body {
   z-index: 1;
 }
 
+html, body {
+  height: 100%;
+  display: flexbox;
+  flex-direction: column;
+}
+
+body > footer {
+  margin-top: auto;
+}
+
