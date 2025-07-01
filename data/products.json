@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Laptops",
+    "description": "Explore our range of laptops designed for every need—whether you're working, gaming, or studying. From sleek ultrabooks and business laptops to high-performance gaming machines, we offer top brands with the latest technology and reliable performance.",
+    "image": "images/products/Laptop.png"
+  },
+  {
+    "title": "Desktops",
+    "description": "Explore our powerful range of desktop computers including compact Mini PCs, all-in-one systems, and tower desktops designed for multitasking, business operations, and personal productivity.",
+    "image": "images/products/Desktop.jpeg"
+  },
+  {
+    "title": "Spares",
+    "description": "Find a complete range of replacement parts and accessories, including mechanical keyboards, ergonomic mice, fans, thermal paste, and screen replacements.",
+    "image": "images/products/spares.png"
+  },
+  {
+    "title": "Cables",
+    "description": "We provide durable, high-speed cables including HDMI, USB, Ethernet, and power cords—tested for safety and long-lasting use.",
+    "image": "images/products/Cables.jpeg"
+  },
+  {
+    "title": "Adapters",
+    "description": "USB-C to HDMI, VGA to HDMI, DisplayPort converters, multiport hubs, and legacy connectors.",
+    "image": "images/products/Adaptors.png"
+  },
+  {
+    "title": "Networking",
+    "description": "Routers, Wi-Fi extenders, modems, switches, and mesh networking systems.",
+    "image": "images/products/Routers.png"
+  },
+  {
+    "title": "Storage",
+    "description": "HDDs, SSDs, portable drives, memory cards—available in various capacities and speeds.",
+    "image": "images/products/Storage.png"
+  },
+  {
+    "title": "Monitors",
+    "description": "LED, IPS, curved, and 4K monitors for gaming, design, and productivity.",
+    "image": "images/products/Monitors.png"
+  },
+  {
+    "title": "Printers",
+    "description": "Inkjet and laser printers with scan, copy, and wireless capabilities.",
+    "image": "images/products/Printers.png"
+  },
+  {
+    "title": "Workstations",
+    "description": "High-end machines for CAD, 3D modeling, simulation, and editing.",
+    "image": "images/products/Workstation.jpg"
+  },
+  {
+    "title": "Power & Charging",
+    "description": "Laptop chargers, power banks, surge protectors, and UPS devices.",
+    "image": "images/products/Batteries.png"
+  }
+]

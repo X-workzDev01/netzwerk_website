@@ -24,20 +24,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="js/index.js"></script>
 
  
 </head>
 <body>
-  <div class="animated-bg">
-
-
 <div class="video-container">
   <video autoplay muted loop playsinline id="bg-video">
     <source src="Videos/Hailuo_Video_laptop,des.mp4" type="video/mp4">
   </video>
   <div class="video-shade"></div>
 </div>
-
 
 
   <!-- Navbar -->
@@ -67,7 +64,28 @@
 
   
 
-  
+<section class="container-fluid px-0 mb-5">
+  <div class="row g-0">
+    <div class="col-12">
+      <div id="promoBannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="promo-carousel-inner">
+          <!-- Slides will be injected here dynamically -->
+        </div>
+
+        <!-- Optional Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#promoBannerCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#promoBannerCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Who We Are Section as Card -->
 <section class="card shadow-sm mb-4 border-0 mt-5 gradient-bg" style="border-radius: 0 !important;">
@@ -301,7 +319,7 @@
         <img src="images/certificate.jpeg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Our Staff Members">
       </div>
     </div>
-
+    
     <!-- Controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#workGalleryCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -312,7 +330,7 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
+    
   <!-- Indicators - Placed outside carousel for better positioning -->
   <div class="text-center mt-3">
     <button type="button" data-bs-target="#workGalleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -389,20 +407,10 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ once: true, easing: 'ease-in-out' });
-</script>
-    <!-- Bootstrap Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Optional: JS to dynamically include nav/footer -->
-  <script src="js/includes.js"></script> 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
-</html>
-</div>
+
+
+
 </body>
 </html>

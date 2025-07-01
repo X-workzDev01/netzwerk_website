@@ -24,22 +24,24 @@
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="js/Product.js"></script>
 </head>
 
 <body>
   <!-- Background Video -->
- <div class="video-container">
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="Videos/Hailuo_Video_laptop,des.mp4" type="video/mp4">
-  </video>
-  <div class="video-shade"></div>
-</div>
+  <div class="video-container">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="Videos/Hailuo_Video_laptop,des.mp4" type="video/mp4">
+    </video>
+    <div class="video-shade"></div>
+  </div>
 
-  <!-- Navbar -->
+
+
+   <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark gradient-navbar shadow-sm fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
+        
         <img src="images/logo.png" alt="Netzwerk Logo" height="30">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -53,187 +55,38 @@
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
-
-          <li class="nav-item"><a class="nav-link" href="enquiry.html">Get in Touch</a></li>
+          
+          <li class="nav-item"><a  class="nav-link" href="enquiry.html">Get in Touch</a></li>
         </ul>
       </div>
     </div>
   </nav>
-
- <!-- Product Categories Section -->
-<section class="py-5">
-  <div class="container mb-4">
-    <h2 class="text-center text-white animate__animated animate__fadeInDown">Product Categories</h2>
-  </div>
-
-  <!-- Product Cards Grid -->
-  <div class="container">
-    <div class="row g-4 justify-content-center">
-
-      <!-- Product Card Template -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Laptops"
-             data-description="Explore our range of laptops designed for every need—whether you're working, gaming, or studying. From sleek ultrabooks and business laptops to high-performance gaming machines, we offer top brands with the latest technology and reliable performance."
-             data-image="images/products/Laptop.png">
-          <img src="images/products/Laptop.png" class="card-img-top" alt="Laptops">
-          <div class="card-body text-center">
-            <h5 class="card-title">Laptops</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Repeat for other categories -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Desktops"
-             data-description="Explore our powerful range of desktop computers including compact Mini PCs, all-in-one systems, and tower desktops designed for multitasking, business operations, and personal productivity."
-             data-image="images/products/Desktop.jpeg">
-          <img src="images/products/Desktop.jpeg" class="card-img-top" alt="Desktops">
-          <div class="card-body text-center">
-            <h5 class="card-title">Desktops</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Spares"
-             data-description="Find a complete range of replacement parts and accessories, including mechanical keyboards, ergonomic mice, fans, thermal paste, and screen replacements."
-             data-image="images/products/spares.png">
-          <img src="images/products/spares.png" class="card-img-top" alt="Spares">
-          <div class="card-body text-center">
-            <h5 class="card-title">Spares</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Cables"
-             data-description="We provide durable, high-speed cables including HDMI, USB, Ethernet, and power cords—tested for safety and long-lasting use."
-             data-image="images/products/Cables.jpeg">
-          <img src="images/products/Cables.jpeg" class="card-img-top" alt="Cables">
-          <div class="card-body text-center">
-            <h5 class="card-title">Cables</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Continue same structure for the rest of your products -->
-      <!-- Adapters -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Adapters"
-             data-description="USB-C to HDMI, VGA to HDMI, DisplayPort converters, multiport hubs, and legacy connectors."
-             data-image="images/products/Adaptors.png">
-          <img src="images/products/Adaptors.png" class="card-img-top" alt="Adapters">
-          <div class="card-body text-center">
-            <h5 class="card-title">Adapters</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Networking -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Networking"
-             data-description="Routers, Wi-Fi extenders, modems, switches, and mesh networking systems."
-             data-image="images/products/Routers.png">
-          <img src="images/products/Routers.png" class="card-img-top" alt="Networking">
-          <div class="card-body text-center">
-            <h5 class="card-title">Networking</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Storage -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Storage"
-             data-description="HDDs, SSDs, portable drives, memory cards—available in various capacities and speeds."
-             data-image="images/products/Storage.png">
-          <img src="images/products/Storage.png" class="card-img-top" alt="Storage">
-          <div class="card-body text-center">
-            <h5 class="card-title">Storage</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Monitors -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Monitors"
-             data-description="LED, IPS, curved, and 4K monitors for gaming, design, and productivity."
-             data-image="images/products/Monitors.png">
-          <img src="images/products/Monitors.png" class="card-img-top" alt="Monitors">
-          <div class="card-body text-center">
-            <h5 class="card-title">Monitors</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Printers -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Printers"
-             data-description="Inkjet and laser printers with scan, copy, and wireless capabilities."
-             data-image="images/products/Printers.png">
-          <img src="images/products/Printers.png" class="card-img-top" alt="Printers">
-          <div class="card-body text-center">
-            <h5 class="card-title">Printers</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Workstations -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Workstations"
-             data-description="High-end machines for CAD, 3D modeling, simulation, and editing."
-             data-image="images/products/Workstation.jpg">
-          <img src="images/products/Workstation.jpg" class="card-img-top" alt="Workstations">
-          <div class="card-body text-center">
-            <h5 class="card-title">Workstations</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Power & Charging -->
-      <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeIn"
-             onclick="showProductModal(this)"
-             data-title="Power & Charging"
-             data-description="Laptop chargers, power banks, surge protectors, and UPS devices."
-             data-image="images/products/Batteries.png">
-          <img src="images/products/Batteries.png" class="card-img-top" alt="Power & Charging">
-          <div class="card-body text-center">
-            <h5 class="card-title">Power & Charging</h5>
-          </div>
-        </div>
-      </div>
-
+  <!-- Product Grid Section -->
+  <div class="container my-5">
+    <div class="row" id="productGrid">
+      <!-- Product cards will be dynamically injected here -->
     </div>
   </div>
-</section>
 
-  <!-- WhatsApp Chat Button -->
-  <a href="https://wa.me/916361827210?text=Hi%20Netzwerk!" target="_blank" class="whatsapp-chat">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+  <!-- Product Detail Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">Product Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalImage" src="" class="img-fluid mb-3" alt="Product Image">
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Footer -->
-    <a href="https://wa.me/916361827210?text=Hi%20Netzwerk!" target="_blank" class="whatsapp-chat">
+   <a href="https://wa.me/916361827210?text=Hi%20Netzwerk!" target="_blank" class="whatsapp-chat">
   <i class="bi bi-whatsapp"></i>
 </a>
  <footer class="text-light text-center text-lg-start pt-5" style="background-color: #020203;">
@@ -260,7 +113,7 @@
         </ul>
       </div>
 
-    <!-- Right: Contact Info -->
+       <!-- Right: Contact Info -->
       <div class="col-lg-4 col-md-6 text-lg-end">
     <h6 class="text-uppercase fw-bold mb-3" style="text-align: right; margin-right: 6rem;">Contact Us</h6>
 
@@ -294,41 +147,61 @@
     <hr class="my-4 border-light">
     <p class="text-center small mb-0">&copy; 2025 Netzwerk. All Rights Reserved.</p>
   </div>
-</footer>
-
-  <!-- Product Detail Modal -->
-  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="productModalLabel">Product Title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p id="modalDescription"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
- <script>
-  AOS.init({
-    duration: 1500,
-    once: true
-  });
-
-  function showProductModal(element) {
-    const title = element.getAttribute("data-title");
-    const description = element.getAttribute("data-description");
+</footer>    
 
 
-    document.getElementById("productModalLabel").textContent = title;
-    document.getElementById("modalDescription").textContent = description;
 
-    const modal = new bootstrap.Modal(document.getElementById("productModal"));
-    modal.show();
-  }
-</script>
+  <!-- Script to Handle Modal & Fetch Products -->
+  <script>
+    AOS.init({
+      duration: 1500,
+      once: true
+    });
 
+    function showProductModal(element) {
+      const title = element.getAttribute("data-title");
+      const description = element.getAttribute("data-description");
+      const image = element.getAttribute("data-image");
+
+      document.getElementById("productModalLabel").textContent = title;
+      document.getElementById("modalDescription").textContent = description;
+      document.getElementById("modalImage").src = image;
+
+      const modal = new bootstrap.Modal(document.getElementById("productModal"));
+      modal.show();
+    }
+
+    // Load products from JSON and create cards
+    fetch('data/products.json')
+      .then(response => response.json())
+      .then(products => {
+        const grid = document.getElementById('productGrid');
+
+        products.forEach(product => {
+          const col = document.createElement('div');
+           col.className = 'col-6 col-sm-4 col-md-3 mb-4';
+
+          col.innerHTML = `
+            <div class="card h-100 shadow-sm" onclick="showProductModal(this)"
+                 data-title="${product.title}"
+                 data-description="${product.description}"
+                 data-image="${product.image}">
+              <img src="${product.image}" class="card-img-top" alt="${product.title}">
+              <div class="card-body text-center">
+                <h5 class="card-title">${product.title}</h5>
+              </div>
+            </div>
+          `;
+
+          grid.appendChild(col);
+        });
+      })
+      .catch(error => {
+        console.error("Failed to load products:", error);
+      });
+
+
+      
+  </script>
 </body>
 </html>
